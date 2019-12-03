@@ -39,7 +39,7 @@ function init_param(layer_dimensions, activation_functions)
 
     for l=1:length(layer_dimensions)-1
 
-        param[string("W_" , string(l))] = 0.1f0*randn(layer_dimensions[l+1] , layer_dimensions[l])
+        param[string("W_" , string(l))] = 0.01f0*randn(layer_dimensions[l+1] , layer_dimensions[l])
         param[string("b_" , string(l))] = zeros(layer_dimensions[l+1] , 1)
 		param[string("g_" , string(l))] = activation_functions[l]
     end
